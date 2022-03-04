@@ -18,7 +18,7 @@ export class EmployeeService {
 
     this.http
       .get<any>(
-        'https://epayroll-data-db-serverless-eda-epayroll-poc2.apps.xnkpeyx0.canadacentral.aroapp.io',
+        'https://epayroll-data-db-serverless-eda-epayroll-poc2.apps.xnkpeyx0.canadacentral.aroapp.io/epayroll/processed',
         { headers }
       )
       .subscribe({
@@ -31,7 +31,7 @@ export class EmployeeService {
       });
 
     return this.http.get<any>(
-      'https://epayroll-data-db-serverless-eda-epayroll-poc2.apps.xnkpeyx0.canadacentral.aroapp.io',
+      'https://epayroll-data-db-serverless-eda-epayroll-poc2.apps.xnkpeyx0.canadacentral.aroapp.io/epayroll/processed',
       { headers }
     );
   }
