@@ -29,29 +29,29 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @ApplicationScoped
 public class consumeIncoming {
 
-    @Inject
-    Validator validator;
+//     @Inject
+//     Validator validator;
 
-    @Inject
-    @Channel("output-valid-data")
-    Emitter<String> validEmitter;
+//     @Inject
+//     @Channel("output-valid-data")
+//     Emitter<String> validEmitter;
 
-    @Inject
-    @Channel("output-error-data")
-    Emitter<String> errorEmitter;
+//     @Inject
+//     @Channel("output-error-data")
+//     Emitter<String> errorEmitter;
     
     
-    @Inject
-    @RestClient
-    ValidateSinService validateSinService;
+//     @Inject
+//     @RestClient
+//     ValidateSinService validateSinService;
 
-    @Inject
-    @RestClient
-    ValidateBnService validateBnService;
+//     @Inject
+//     @RestClient
+//     ValidateBnService validateBnService;
 
-    @Inject
-    @RestClient
-    ValidateEpayrollService validateEpayrollService;
+//     @Inject
+//     @RestClient
+//     ValidateEpayrollService validateEpayrollService;
 
 
     @Incoming("validator-epayrolls")                                    
