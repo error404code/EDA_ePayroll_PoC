@@ -18,8 +18,13 @@ public class GreetingResource {
     @Inject
     GreetingService service;
     
-    @Channel("error-data")
-    Emitter<String> errorDataEmitter;
+     @Incoming("validator-epayrolls-knative")
+    public void process_test(String obj) {
+        System.out.println("Received string is "+ obj);
+    }
+    
+//     @Channel("error-data")
+//     Emitter<String> errorDataEmitter;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
@@ -36,16 +41,16 @@ public class GreetingResource {
         return "hello";
     }
     
-    @POST
-    @Path("/senderror")
-    @Consumes(MediaType.TEXT_PLAIN)
-    public String sendErrorData(String data) {
+//     @POST
+//     @Path("/senderror")
+//     @Consumes(MediaType.TEXT_PLAIN)
+//     public String sendErrorData(String data) {
  
-    	errorDataEmitter.send(data);
+//     	errorDataEmitter.send(data);
     	
-    	String result = "Sent:" + data;
-    	System.out.println(result);
+//     	String result = "Sent:" + data;
+//     	System.out.println(result);
     	
-    	return result;
-    }
-}
+//     	return result;
+//     }
+// }
